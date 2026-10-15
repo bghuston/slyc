@@ -1,5 +1,7 @@
 # slyc
 
+<img src="assets/slyc-logo.png" alt="slyc logo: three teal and amber slices suggesting an S" width="160">
+
 Dependency-aware development slices and contract-based deployment planning for large monorepos.
 
 > **Disclaimer: Proof of Concept — inspection only**
