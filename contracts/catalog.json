@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "services": {
+    "checkout": {
+      "1.0": {
+        "orders": "contracts/pact/checkout--orders/1.0.json",
+        "payments": "contracts/pact/checkout--payments/1.0.json"
+      },
+      "1.1": {
+        "orders": "contracts/pact/checkout--orders/1.1.json",
+        "payments": "contracts/pact/checkout--payments/1.1.json"
+      }
+    },
+    "orders": {
+      "1.2": {
+        "inventory": "contracts/pact/orders--inventory/1.2.json"
+      }
+    },
+    "payments": {
+      "1.0": {},
+      "1.1": {},
+      "2.0": {}
+    },
+    "inventory": {
+      "1.3": {}
+    }
+  }
+}

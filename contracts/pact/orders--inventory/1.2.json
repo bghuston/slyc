@@ -1,0 +1,48 @@
+{
+  "consumer": {
+    "name": "orders"
+  },
+  "provider": {
+    "name": "inventory"
+  },
+  "interactions": [
+    {
+      "type": "Synchronous/HTTP",
+      "description": "query available coffee stock",
+      "request": {
+        "method": "GET",
+        "path": "/inventory/coffee"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "sku": "coffee",
+          "available": 10
+        },
+        "matchingRules": {
+          "body": {
+            "$.available": {
+              "matchers": [
+                {
+                  "match": "integer"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "4.0"
+    },
+    "slyc": {
+      "origin": "hand-authored design fixture",
+      "verified": false
+    }
+  }
+}

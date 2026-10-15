@@ -1,0 +1,16 @@
+{
+  "projects": [
+    "node:@slyc/checkout",
+    "uv:slyc-orders",
+    "uv:slyc-payments",
+    "cargo:slyc-inventory"
+  ],
+  "include": [],
+  "configs": [
+    "base",
+    "python",
+    "typescript",
+    "rust",
+    "pact"
+  ]
+}

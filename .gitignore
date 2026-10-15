@@ -1,0 +1,17 @@
+# Composed environments and worktree-local state
+/.vscode/
+/.slice-state.json
+/.slyc-venv/
+/.venv/
+# Existing .devcontainer/ is host-owned; generated target is reserved below.
+/.devcontainer/generated/
+__pycache__/
+*.py[cod]
+*.egg-info/
+node_modules/
+dist/
+target/
+.env
+.env.*
+!.env.example
+artifacts/

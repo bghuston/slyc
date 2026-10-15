@@ -1,0 +1,16 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "slyc: inspect slices",
+      "type": "process",
+      "command": "python3",
+      "args": [
+        "-m",
+        "slyc",
+        "list"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}

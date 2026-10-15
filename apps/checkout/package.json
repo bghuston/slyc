@@ -1,0 +1,20 @@
+{
+  "name": "@slyc/checkout",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@slyc/api-types": "*"
+  },
+  "devDependencies": {
+    "typescript": "~5.7.3",
+    "@types/node": "^22.10.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

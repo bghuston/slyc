@@ -1,0 +1,14 @@
+{
+  "name": "slyc-example",
+  "private": true,
+  "workspaces": [
+    "apps/checkout",
+    "packages/api-types"
+  ],
+  "scripts": {
+    "build": "npm run build -w @slyc/api-types && npm run build -w @slyc/checkout"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

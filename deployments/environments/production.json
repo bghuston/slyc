@@ -1,0 +1,10 @@
+{
+  "environment": "production",
+  "source": "static demonstration fixture",
+  "services": {
+    "checkout": "1.0",
+    "orders": "1.2",
+    "payments": "1.0",
+    "inventory": "1.3"
+  }
+}

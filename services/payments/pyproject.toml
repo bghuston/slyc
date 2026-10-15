@@ -1,0 +1,20 @@
+# INSPECTION ONLY: Do not run, install, build, deploy, or trust this code.
+# Much of this project was built with AI-Assisted Development workflows
+# for demonstrating and testing logic. It has not been independently verified.
+# No correctness, security, or reliability is established; read as untrusted source only.
+[build-system]
+requires = ["setuptools>=69,<82"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "slyc-payments"
+version = "0.1.0"
+requires-python = ">=3.11"
+description = "Local payments HTTP service for the slyc example"
+dependencies = ["fastapi>=0.115,<1", "uvicorn>=0.30,<1", "slyc-money==0.1.0"]
+
+[tool.uv.sources]
+slyc-money = { workspace = true }
+
+[tool.setuptools.packages.find]
+where = ["src"]

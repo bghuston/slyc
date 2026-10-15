@@ -1,0 +1,11 @@
+{
+  "projects": [
+    "uv:slyc-orders"
+  ],
+  "include": [],
+  "configs": [
+    "base",
+    "python",
+    "pact"
+  ]
+}

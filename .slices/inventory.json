@@ -1,0 +1,11 @@
+{
+  "projects": [
+    "cargo:slyc-inventory"
+  ],
+  "include": [],
+  "configs": [
+    "base",
+    "rust",
+    "pact"
+  ]
+}

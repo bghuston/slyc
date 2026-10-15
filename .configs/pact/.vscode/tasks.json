@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "slyc: runtime graph",
+      "type": "process",
+      "command": "python3",
+      "args": [
+        "-m",
+        "slyc",
+        "deploy",
+        "graph"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}

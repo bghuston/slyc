@@ -1,0 +1,60 @@
+{
+  "consumer": {
+    "name": "checkout"
+  },
+  "provider": {
+    "name": "payments"
+  },
+  "interactions": [
+    {
+      "type": "Synchronous/HTTP",
+      "description": "simulate an approved payment",
+      "request": {
+        "method": "POST",
+        "path": "/payments",
+        "headers": {
+          "Content-Type": "application/json",
+          "Idempotency-Key": "contract-example"
+        },
+        "body": {
+          "order_id": "ord_example",
+          "amount_minor": 1200,
+          "currency": "GBP"
+        }
+      },
+      "response": {
+        "status": 201,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "transaction_id": "txn_example",
+          "order_id": "ord_example",
+          "amount_minor": 1200,
+          "currency": "GBP",
+          "status": "approved"
+        },
+        "matchingRules": {
+          "body": {
+            "$.transaction_id": {
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "4.0"
+    },
+    "slyc": {
+      "origin": "hand-authored design fixture",
+      "verified": false
+    }
+  }
+}

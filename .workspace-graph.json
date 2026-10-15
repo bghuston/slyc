@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "format": "slyc.workspace",
+  "provenance": {
+    "kind": "hand-authored",
+    "mise_version_target": "2026.10.11",
+    "native_capture": null,
+    "note": "Not native mise output. IDs follow the documented provider conventions; execution confirmation is pending."
+  },
+  "projects": {
+    "node:@slyc/checkout": {
+      "root": "apps/checkout",
+      "dependencies": [
+        "node:@slyc/api-types"
+      ],
+      "service": "checkout"
+    },
+    "node:@slyc/api-types": {
+      "root": "packages/api-types",
+      "dependencies": []
+    },
+    "uv:slyc-orders": {
+      "root": "services/orders",
+      "dependencies": [
+        "uv:slyc-money"
+      ],
+      "service": "orders"
+    },
+    "uv:slyc-payments": {
+      "root": "services/payments",
+      "dependencies": [
+        "uv:slyc-money"
+      ],
+      "service": "payments"
+    },
+    "uv:slyc-money": {
+      "root": "packages/money",
+      "dependencies": []
+    },
+    "cargo:slyc-inventory": {
+      "root": "services/inventory",
+      "dependencies": [
+        "cargo:slyc-inventory-core"
+      ],
+      "service": "inventory"
+    },
+    "cargo:slyc-inventory-core": {
+      "root": "packages/inventory-core",
+      "dependencies": []
+    }
+  }
+}

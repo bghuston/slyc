@@ -1,0 +1,11 @@
+{
+  "projects": [
+    "node:@slyc/checkout"
+  ],
+  "include": [],
+  "configs": [
+    "base",
+    "typescript",
+    "pact"
+  ]
+}

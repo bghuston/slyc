@@ -1,0 +1,9 @@
+{
+  "environment": "production",
+  "kind": "design expectation; not verification evidence",
+  "candidate": {
+    "payments": "1.1"
+  },
+  "expected_after_real_verification": "PASS",
+  "reason": "Preserves status=approved required by Checkout 1.0"
+}

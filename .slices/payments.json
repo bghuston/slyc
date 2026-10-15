@@ -1,0 +1,11 @@
+{
+  "projects": [
+    "uv:slyc-payments"
+  ],
+  "include": [],
+  "configs": [
+    "base",
+    "python",
+    "pact"
+  ]
+}

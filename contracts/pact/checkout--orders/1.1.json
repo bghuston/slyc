@@ -1,0 +1,59 @@
+{
+  "consumer": {
+    "name": "checkout"
+  },
+  "provider": {
+    "name": "orders"
+  },
+  "interactions": [
+    {
+      "type": "Synchronous/HTTP",
+      "description": "create a coffee order",
+      "request": {
+        "method": "POST",
+        "path": "/orders",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "sku": "coffee",
+          "quantity": 1
+        }
+      },
+      "response": {
+        "status": 201,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "order_id": "ord_example",
+          "sku": "coffee",
+          "quantity": 1,
+          "status": "created",
+          "amount_minor": 1200,
+          "currency": "GBP"
+        },
+        "matchingRules": {
+          "body": {
+            "$.order_id": {
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "4.0"
+    },
+    "slyc": {
+      "origin": "hand-authored design fixture",
+      "verified": false
+    }
+  }
+}

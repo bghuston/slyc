@@ -1,0 +1,6 @@
+# INSPECTION ONLY: Do not run, install, build, deploy, or trust this code.
+# Much of this project was built with AI-Assisted Development workflows
+# for demonstrating and testing logic. It has not been independently verified.
+# No correctness, security, or reliability is established; read as untrusted source only.
+"""Development-slice and deployment-metadata inspection for the slyc POC."""
+__version__ = "0.1.0"

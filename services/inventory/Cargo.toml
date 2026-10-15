@@ -1,0 +1,15 @@
+# INSPECTION ONLY: Do not run, install, build, deploy, or trust this code.
+# Much of this project was built with AI-Assisted Development workflows
+# for demonstrating and testing logic. It has not been independently verified.
+# No correctness, security, or reliability is established; read as untrusted source only.
+[package]
+name = "slyc-inventory"
+version = "0.1.0"
+edition = "2021"
+description = "Local HTTP inventory service for slyc"
+
+[dependencies]
+slyc-inventory-core = { path = "../../packages/inventory-core" }
+axum = "0.8"
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "net"] }
+serde = { version = "1", features = ["derive"] }

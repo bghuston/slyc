@@ -1,0 +1,14 @@
+{
+  "environment": "production",
+  "kind": "design expectation; not verification evidence",
+  "candidate": {
+    "checkout": "1.1",
+    "payments": "2.0"
+  },
+  "proposed_order": [
+    "checkout",
+    "payments"
+  ],
+  "expected_after_real_verification": "PASS only if every affected edge passes at every step",
+  "reason": "Relax the consumer requirement before removing the provider field"
+}

@@ -1,0 +1,20 @@
+# INSPECTION ONLY: Do not run, install, build, deploy, or trust this code.
+# Much of this project was built with AI-Assisted Development workflows
+# for demonstrating and testing logic. It has not been independently verified.
+# No correctness, security, or reliability is established; read as untrusted source only.
+name: Check committed graph declarations
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  declaration-parity:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Check full-checkout manifest names, workspace membership and local edges
+        run: python3 scripts/validate.py --graph-only
+      # Native mise JSON regeneration/normalization is NOT implemented here.
